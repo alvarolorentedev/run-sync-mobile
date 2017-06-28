@@ -1,17 +1,17 @@
 import React from 'react'
 import { Actions } from 'react-native-router-flux'
-import { Footer, FooterTab, Button, Icon } from 'native-base'
+import { Footer, FooterTab, Button, Icon, Text } from 'native-base'
 
 export default function footer(current){
     return  <Footer>
                 <FooterTab>
-                    <Button transparent onPress={Actions.run} active={current === "Runs"} >
+                    <Button vertical onPress={Actions.run} active={current === "Runs"} >
                         <Icon name='ios-walk' />
-                        Runs
+                        <Text>Runs</Text>
                     </Button>
-                    <Button transparent onPress={Actions.settings} active={current === "Settings"}>
+                    <Button vertical onPress={Actions.settings} active={current === "Settings"}>
                         <Icon name='ios-settings' />
-                        Settings
+                        <Text>Settings</Text>
                     </Button>
                 </FooterTab>
             </Footer>

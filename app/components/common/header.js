@@ -1,8 +1,10 @@
 import React from 'react'
-import { Header, Title } from 'native-base'
+import { Header, Title, Body } from 'native-base'
 
 export default function header(name){
     return  <Header>
-                <Title>{name}</Title>
+                <Body>
+                    <Title>{name}</Title>
+                </Body>
             </Header>
 }
