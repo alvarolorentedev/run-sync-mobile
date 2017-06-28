@@ -15,6 +15,8 @@ import {
   View
 } from 'react-native';
 
+const RouterWithRedux = connect()(Router);
+
 const scenes = Actions.create(
     <Scene key="root" hideNavBar={true} tabs={false} >
         <Scene key="tabbar" tabs={false} hideNavBar={true} initial>
@@ -26,7 +28,7 @@ const scenes = Actions.create(
 
 class AppContainer extends Component {
 render() {
-        return <Router  {...this.props} scenes={scenes}/>
+        return <RouterWithRedux  {...this.props} scenes={scenes}/>
     }
 }
 
