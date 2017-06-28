@@ -31,6 +31,9 @@
 		"react-native-debugger-open": "^0.3.11"
 	},
 	"jest": {
-		"preset": "react-native"
+		"preset": "react-native",
+		"transformIgnorePatterns": [
+			"/node_modules/(?!native-base)/"
+		]
 	}
 }
