@@ -6,7 +6,8 @@ import { ActionCreators } from '../actions';
 
 import { Actions, Router, Scene } from 'react-native-router-flux';
 
-import dummy from './dummy-view'
+import runs from './runs'
+import settings from './settings'
 
 import {
   AppRegistry,
@@ -20,7 +21,8 @@ const RouterWithRedux = connect()(Router);
 const scenes = Actions.create(
     <Scene key="root" hideNavBar={true} tabs={false} >
         <Scene key="tabbar" tabs={false} hideNavBar={true} initial>
-            <Scene key='test' component={dummy} title="Test" initial/>
+            <Scene key='runs' component={runs} title="Runs" initial/>
+            <Scene key='settings' component={settings} title="Settings"/>
         </Scene>
      </Scene>
      

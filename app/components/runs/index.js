@@ -1,15 +1,10 @@
 import React, { Component } from 'react';
-import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+import { StyleSheet, View, Text } from 'react-native';
 
 import { Container } from 'native-base'
 
-import footer from './common/footer'
-import header from './common/header'
+import footer from '../common/footer'
+import header from '../common/header'
 
 export default class run_sync_mobile extends Component {
   render() {
@@ -18,14 +13,7 @@ export default class run_sync_mobile extends Component {
           {header("Runs")}
             <View style={styles.container}>
               <Text style={styles.welcome}>
-                Welcome to React Native!
-              </Text>
-              <Text style={styles.instructions}>
-                To get started, edit index.android.js
-              </Text>
-              <Text style={styles.instructions}>
-                Double tap R on your keyboard to reload,{'\n'}
-                Shake or press menu button for dev menu
+                Welcome to Run Sync!
               </Text>
             </View>
           {footer("Runs")}
@@ -45,10 +33,5 @@ const styles = StyleSheet.create({
     fontSize: 20,
     textAlign: 'center',
     margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+  }
 });

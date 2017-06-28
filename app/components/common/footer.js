@@ -5,7 +5,7 @@ import { Footer, FooterTab, Button, Icon, Text } from 'native-base'
 export default function footer(current){
     return  <Footer>
                 <FooterTab>
-                    <Button vertical onPress={Actions.run} active={current === "Runs"} >
+                    <Button vertical onPress={Actions.runs} active={current === "Runs"} >
                         <Icon name='ios-walk' />
                         <Text>Runs</Text>
                     </Button>
