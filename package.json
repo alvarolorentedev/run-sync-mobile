@@ -10,13 +10,16 @@
 		"postinstall": "rndebugger-open"
 	},
 	"dependencies": {
+		"endomondo-unofficial-api": "^0.0.9",
 		"immutable": "^3.8.1",
 		"native-base": "2.1.5",
 		"react": "16.0.0-alpha.12",
 		"react-native": "0.45.1",
 		"react-native-router-flux": "^3.40.1",
+		"react-native-sensitive-info": "^5.1.0",
 		"react-redux": "^5.0.5",
 		"redux": "^3.7.0",
+		"redux-create-reducer": "^1.1.1",
 		"redux-devtools-extension": "^2.13.2",
 		"redux-logger": "^3.0.6",
 		"redux-persist": "^4.8.0",
@@ -27,8 +30,8 @@
 		"babel-jest": "20.0.3",
 		"babel-preset-react-native": "2.0.0",
 		"jest": "20.0.4",
-		"react-test-renderer": "16.0.0-alpha.12",
-		"react-native-debugger-open": "^0.3.11"
+		"react-native-debugger-open": "^0.3.11",
+		"react-test-renderer": "16.0.0-alpha.12"
 	},
 	"jest": {
 		"preset": "react-native",

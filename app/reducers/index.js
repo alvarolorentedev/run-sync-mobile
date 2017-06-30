@@ -1,5 +1,6 @@
 import { combineReducers } from 'redux'
+import menu from './menu'
 
 export default combineReducers({
-    blank: function(state, action) {if (state == null) state = []; return state;}
+    menu
 });

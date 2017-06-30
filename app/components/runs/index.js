@@ -1,25 +1,30 @@
 import React, { Component } from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 
-import { Container } from 'native-base'
+import { Container, Fab, Icon, Button } from 'native-base'
 
 import footer from '../common/footer'
+import Menu from '../common/menu'
 import header from '../common/header'
 
 export default class run_sync_mobile extends Component {
-  render() {
-    return (
-      <Container> 
-          {header("Runs")}
-            <View style={styles.container}>
-              <Text style={styles.welcome}>
-                Welcome to Run Sync!
-              </Text>
-            </View>
-          {footer("Runs")}
-      </Container>
-    );
-  }
+    constructor(props){
+        super(props)
+    }
+
+    render() {
+        return (
+            <Container> 
+                {header("Runs")}
+                <View style={styles.container}>
+                    <Text style={styles.welcome}>
+                    Welcome to Run Sync!
+                    </Text>
+                </View>
+                <Menu {...this.props} />
+            </Container>
+        );
+    }
 }
 
 const styles = StyleSheet.create({
