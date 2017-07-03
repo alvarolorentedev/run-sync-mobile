@@ -3,11 +3,10 @@ import { StyleSheet, View, Text } from 'react-native';
 
 import { Container, Fab, Icon, Button } from 'native-base'
 
-import footer from '../common/footer'
 import Menu from '../common/menu'
 import header from '../common/header'
 
-export default class run_sync_mobile extends Component {
+export default class Runs extends Component {
     constructor(props){
         super(props)
     }

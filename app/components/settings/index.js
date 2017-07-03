@@ -3,10 +3,9 @@ import { StyleSheet, View, Text } from 'react-native';
 
 import { Container } from 'native-base'
 
-import footer from '../common/footer'
 import header from '../common/header'
 
-export default class run_sync_mobile extends Component {
+export default class Settings extends Component {
   render() {
     return (
       <Container> 
@@ -16,7 +15,6 @@ export default class run_sync_mobile extends Component {
                 All Settings
               </Text>
             </View>
-          {footer("Settings")}
       </Container>
     );
   }

@@ -8,13 +8,7 @@ import { Actions, Router, Scene } from 'react-native-router-flux';
 
 import runs from './runs'
 import settings from './settings'
-
-import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+import addAccount from './add-account'
 
 const RouterWithRedux = connect()(Router);
 
@@ -23,6 +17,7 @@ const scenes = Actions.create(
         <Scene key="tabbar" tabs={false} hideNavBar={true} initial>
             <Scene key='runs' component={runs} title="Runs" initial/>
             <Scene key='settings' component={settings} title="Settings"/>
+            <Scene key='addAcount' component={addAccount} title="Add Account"/>
         </Scene>
      </Scene>
      

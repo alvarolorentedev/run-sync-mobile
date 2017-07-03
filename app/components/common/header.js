@@ -1,10 +1,18 @@
 import React from 'react'
-import { Header, Title, Body } from 'native-base'
+import { Actions } from 'react-native-router-flux'
+import { Header, Title, Body, Left, Right, Button, Icon } from 'native-base'
 
 export default function header(name){
     return  <Header>
+                <Left>
+                    {name!="Runs" && 
+                    <Button transparent onPress={Actions.pop}>
+                        <Icon name='ios-arrow-back' />
+                    </Button>}
+                </Left>
                 <Body>
                     <Title>{name}</Title>
                 </Body>
+                <Right/>
             </Header>
 }

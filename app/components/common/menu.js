@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import React, { Component } from 'react'
+import { Actions } from 'react-native-router-flux'
 
-import { Container, Fab, Icon, Button } from 'native-base'
+import { Fab, Icon, Button } from 'native-base'
 import { connect } from 'react-redux'
 
 class Menu extends Component {
@@ -15,13 +15,20 @@ class Menu extends Component {
             <Fab
                 active={this.props.active}
                 direction="up"
-                containerStyle={{ }}
-                style={{ backgroundColor: '#5067FF' }}
                 position="bottomRight"
                 onPress={() => this.props.toggleMenu()}>
-                <Icon name="share" />
-                <Button disabled style={{ backgroundColor: '#DD5144' }}>
-                    <Icon name="mail" />
+                <Icon name="md-more" />
+                <Button>
+                    <Icon name="md-settings" onPress={ () =>{
+                        this.props.toggleMenu()
+                        Actions.settings()
+                        }} />
+                </Button>
+                <Button>
+                    <Icon name="md-add" onPress={ () =>{
+                        this.props.toggleMenu()
+                        Actions.addAcount()
+                        }} />
                 </Button>
           </Fab>
         );
