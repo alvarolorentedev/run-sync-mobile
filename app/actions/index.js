@@ -4,4 +4,4 @@ import * as accounts from './accounts'
 export const ActionCreators = Object.assign({},
     menu,
     accounts
-);
+)
