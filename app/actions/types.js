@@ -1,2 +1,4 @@
 export const TOGGLE_MENU = 'TOGGLE_MENU'
 export const ADD_ACCOUNT = 'ADD_ACCOUNT'
+export const TEST_ACCOUNT = 'TEST_ACCOUNT'
+export const FAIL_ADD_ACCOUNT = 'FAIL_ADD_ACCOUNT'

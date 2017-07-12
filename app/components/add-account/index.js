@@ -8,6 +8,7 @@ import header from '../common/header'
 export default class AddAccount extends Component {
     constructor(props){
         super(props)
+        this.state = { username: '', password: '' };
     }
 
     render() {
@@ -18,14 +19,14 @@ export default class AddAccount extends Component {
                      <Form>
                         <Item floatingLabel>
                             <Label>Username</Label>
-                            <Input />
+                            <Input onChangeText={(text) => this.setState({ ... this.state , username : text})}  />
                         </Item>
                         <Item floatingLabel last>
                             <Label>Password</Label>
-                            <Input secureTextEntry={true} />
+                            <Input secureTextEntry={true} onChangeText={(text) => this.setState({ ... this.state , username : text})} />
                         </Item>
                     </Form>
-                    <Button onPress={() => this.props.addAccount()}><Text>Add</Text></Button>
+                    <Button onPress={() => this.props.addAccount(this.state)}><Text>Add</Text></Button>
                 </View>
             </Container>
         );
