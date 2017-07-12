@@ -18,7 +18,6 @@ describe('check on accounts', () => {
     authenticate.mockImplementation(() => Promise.resolve())
     const store = mockStore({ })
     const expectedActions = [
-      { type: types.TEST_ACCOUNT },
       { type: types.ADD_ACCOUNT }
     ]
     return store.dispatch(accountsActions.addAccount({email: "", password: ""})).then( () =>{
@@ -30,7 +29,6 @@ describe('check on accounts', () => {
     authenticate.mockReturnValue(Promise.reject())
     const store = mockStore({ })
     const expectedActions = [
-      { type: types.TEST_ACCOUNT },
       { type: types.FAIL_ADD_ACCOUNT }
     ]
     return store.dispatch(accountsActions.addAccount({email: "", password: ""})).then( () =>{
