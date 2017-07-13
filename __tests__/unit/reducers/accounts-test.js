@@ -11,4 +11,8 @@ describe('reducers for accounts', () => {
     expect(accounts.validated(false,{type: types.FAIL_ADD_ACCOUNT})).not.toBeTruthy()
   })
 
+  it('reducer has validated state', () => {
+    expect(accounts.default(undefined, {type:"FAKE"}).validated).toBeDefined()
+  })
+
 })
